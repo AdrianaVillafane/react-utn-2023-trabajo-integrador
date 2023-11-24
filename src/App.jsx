@@ -37,14 +37,16 @@ const App = () => {
     };
 
     return (
+        
         <div className="app">
             <h1>Task Manager</h1>
             <TaskForm addTask={addTask} />
-            <TaskList
+           <div className="taskList"> <TaskList
                 tasks={tasks}
                 completeTask={completeTask}
                 deleteTask={deleteTask}
-            />
+            /></div>
+            
             <footer className="footer">
                 <div className="multiline-text">
                     Grupo 3: Adriana Villafañe(21992626),

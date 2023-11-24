@@ -12,8 +12,8 @@ const TaskItem = ({ task, completeTask, deleteTask }) => {
   return (
     <div className={`task-item ${task.completed ? 'completed' : ''}`}>
       <span>{task.name}</span>
-      <button onClick={handleComplete}>Complete</button>
-      <button onClick={handleDelete}>Delete</button>
+      <button className="button"onClick={handleComplete}>Complete</button>
+      <button className="button" onClick={handleDelete}>Delete</button>
     </div>
   );
 };
