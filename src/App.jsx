@@ -6,9 +6,9 @@ const App = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        // Aquí podrías utilizar localStorage para guardar/obtener las tareas
-        // Ejemplo: const storedTasks = JSON.parse(localStorage.getItem('tasks'));
-        // setTasks(storedTasks || []);
+       
+         const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+         setTasks(storedTasks || []);
     }, []);
 
     const addTask = (name) => {
@@ -18,8 +18,8 @@ const App = () => {
             completed: false,
         };
         setTasks([...tasks, newTask]);
-        // Aquí podrías guardar en localStorage las tareas actualizadas
-        // Ejemplo: localStorage.setItem('tasks', JSON.stringify([...tasks, newTask]));
+       
+         localStorage.setItem('tasks', JSON.stringify([...tasks, newTask]));
     };
 
     const completeTask = (id) => {
